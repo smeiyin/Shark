@@ -26,7 +26,7 @@ MySimulationCell<- function(Design = Design, RowOfDesign = 1, K = 2){
     MyResult[k, ] <- c(MyResult1, MyResult2)
   }
   #save the time to run the analyses of K data sets in one cell of the design.
-  time <- proc.time() - tmp
+  attr(MyResult,'time') <- proc.time() - tmp
   return(MyResult)
 }
 
